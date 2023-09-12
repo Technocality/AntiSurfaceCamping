@@ -1,5 +1,6 @@
 ﻿namespace AntiSurfaceCamping
 {
+    using PluginAPI.Core;
     using System.ComponentModel;
     using Exiled.API.Interfaces;
     public class Config : IConfig
@@ -12,5 +13,7 @@
         public string BraoadcastText { get; set; } = "You are slowly taking radiation poisoning";
         [Description("How Much damage players take on surface")]
         public int Damage { get; set; } = 5; // Set to 5 by default.
+        [Description("max time in seconds till players will take damage. default= 600 = 5minutes")]
+        public int MaxSurfaceTime { get; set; } = 600;
     }
 }
